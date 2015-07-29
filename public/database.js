@@ -11,8 +11,8 @@ if(err) {
 })
 //this is the document "the schema" of the data mode
 var personInfo = mongoose.Schema({
-    user_name: String,
-    address: String,
+    User_Name: String,
+    Address: String,
     email: String,
     
     })
@@ -22,9 +22,9 @@ var PersonInfoModel = mongoose.model('PersonInfo',personInfo)
 
 exports.addPersonInfo = function(req,res,data){
 
- var temo = PersonInfoModel()
- temp.user_name = data.user_name
- temp.address = data.address
+ var temp = PersonInfoModel()
+ temp.User_Name = data.User_Name
+ temp.Address = data.Address
  temp.email = data.email
  
  temp.save()

@@ -1,5 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var db = require('_/database')
 var app = express()
 
  
@@ -15,7 +16,7 @@ app.use(bodyParser())
 app.post('/contact', function(req,res){
 
     console.log(req.body)
-    res.send("your data is saved")
+    db.addPersonInfo(res,req,body)
 })
 
 
